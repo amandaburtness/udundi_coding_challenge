@@ -1,0 +1,160 @@
+/* Variables */
+
+$primary-color: #611818;
+$main-text-color: white;
+$popup-background-color: white;
+$overlay-color: rgba(0, 0, 0, 0.5);
+
+/* CSS General Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    font-size: 62.5%; /* make sure that font sizes are accessable to everyone */   
+}
+
+.row {
+
+    padding: 0;
+    margin: 0;
+
+    .col-4 {
+        background-color: $primary-color;
+
+        h1 {
+            animation: ease 5s;
+        }
+
+        a {
+            padding: 4px 2px;
+            margin-right: 20px;
+            display: flex;
+            position: absolute;
+            left: 16vw;
+            bottom: 29vh;
+            text-decoration: none;
+            color: $main-text-color;
+
+            button {
+                background: url("../udundi_coding_challenge/images/Plus.svg") no-repeat;
+                border: none;
+                height: 43px;
+                width: 43px;
+                align-items: flex-end;
+            }
+
+            span {
+                padding: 5px 0 20px 20px;
+                font-size: 2rem;
+            }
+
+            .modal {
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%) scale(0);
+                transition: 2s ease-in-out;
+                border: 1px solid black;
+                z-index: 10;
+                background-color: $popup-background-color;
+                width: 400px;
+                max-width: 80%;
+
+                .header {
+                    padding: 10px 15px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    .title {
+                        font-size: 1.25rem;
+                        font-weight: bold;
+                    }
+
+                    .close-btn {
+                        cursor: pointer;
+                        border: none;
+                        outline: none;
+                        background: none;
+                        font-size: 1.25rem;
+                        font-weight: bold;
+                    }
+                }
+            
+                .body {
+                    padding: 10px 15px;
+                }
+            }
+
+            .modal.active {
+                transform: translate(-50%, -50%) scale(1);
+            }
+
+            #overlay {
+                position: fixed;
+                opacity: 0;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: $overlay-color;
+                pointer-events: none;
+                transition: 2s ease-in-out;
+            }
+
+            #overlay.active {
+                opacity: 1;
+                pointer-events: all;
+            }
+          }
+
+    }
+
+    .col-8 {
+        padding: 0;
+    }
+
+    .jumbotron {
+        background-image: url('../udundi_coding_challenge/images/Coding-Challenge-Image.png'); 
+        height: 100vh;
+        background-size: cover;
+        background-position: center;
+    }
+
+    h1 {
+        position: absolute;
+        bottom: 30vh;
+        left: 20vh;
+        color: white;
+        font-family: Georgia, sans-serif;
+        font-size: 27rem;
+    }
+
+    button {
+        border: 0;
+    }
+    
+    #btn-fb {
+        background: url("../udundi_coding_challenge/images/Facebook.svg") no-repeat;
+        background-size: contain;
+        display: inline-block;
+        position: absolute;
+        right: 5vw;
+        bottom: 17vh;
+        height: 8vh;
+        width: 8vh;
+    }
+
+    #btn-insta {
+        background: url("../udundi_coding_challenge/images/Instagram.svg") no-repeat;
+        background-size: contain;
+        display: inline-block;
+        position: absolute;
+        right: 4.5vw;
+        bottom: 5vh;
+        height: 9vh;
+        width: 9vh;
+    }
+}
+

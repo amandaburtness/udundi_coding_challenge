@@ -1,0 +1,167 @@
+/* Variables */
+/* CSS General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+  font-size: 62.5%;
+  /* make sure that font sizes are accessable to everyone */
+}
+
+.row {
+  padding: 0;
+  margin: 0;
+}
+
+.row .col-4 {
+  background-color: #611818;
+}
+
+.row .col-4 h1 {
+  -webkit-animation: ease 5s;
+          animation: ease 5s;
+}
+
+.row .col-4 a {
+  padding: 4px 2px;
+  margin-right: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  left: 16vw;
+  bottom: 29vh;
+  text-decoration: none;
+  color: white;
+}
+
+.row .col-4 a button {
+  background: url("../udundi_coding_challenge/images/Plus.svg") no-repeat;
+  border: none;
+  height: 43px;
+  width: 43px;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.row .col-4 a span {
+  padding: 5px 0 20px 20px;
+  font-size: 2rem;
+}
+
+.row .col-4 a .modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) scale(0);
+          transform: translate(-50%, -50%) scale(0);
+  -webkit-transition: 2s ease-in-out;
+  transition: 2s ease-in-out;
+  border: 1px solid black;
+  z-index: 10;
+  background-color: white;
+  width: 400px;
+  max-width: 80%;
+}
+
+.row .col-4 a .modal .header {
+  padding: 10px 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.row .col-4 a .modal .header .title {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.row .col-4 a .modal .header .close-btn {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.row .col-4 a .modal .body {
+  padding: 10px 15px;
+}
+
+.row .col-4 a .modal.active {
+  -webkit-transform: translate(-50%, -50%) scale(1);
+          transform: translate(-50%, -50%) scale(1);
+}
+
+.row .col-4 a #overlay {
+  position: fixed;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+  -webkit-transition: 2s ease-in-out;
+  transition: 2s ease-in-out;
+}
+
+.row .col-4 a #overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.row .col-8 {
+  padding: 0;
+}
+
+.row .jumbotron {
+  background-image: url("../udundi_coding_challenge/images/Coding-Challenge-Image.png");
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+
+.row h1 {
+  position: absolute;
+  bottom: 30vh;
+  left: 20vh;
+  color: white;
+  font-family: Georgia, sans-serif;
+  font-size: 27rem;
+}
+
+.row button {
+  border: 0;
+}
+
+.row #btn-fb {
+  background: url("../udundi_coding_challenge/images/Facebook.svg") no-repeat;
+  background-size: contain;
+  display: inline-block;
+  position: absolute;
+  right: 5vw;
+  bottom: 17vh;
+  height: 8vh;
+  width: 8vh;
+}
+
+.row #btn-insta {
+  background: url("../udundi_coding_challenge/images/Instagram.svg") no-repeat;
+  background-size: contain;
+  display: inline-block;
+  position: absolute;
+  right: 4.5vw;
+  bottom: 5vh;
+  height: 9vh;
+  width: 9vh;
+}
+/*# sourceMappingURL=index.css.map */
