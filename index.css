@@ -18,8 +18,34 @@
 }
 
 .row .col-4 h1 {
-  -webkit-animation: ease 5s;
-          animation: ease 5s;
+  -webkit-animation: load 2s ease-in-out;
+          animation: load 2s ease-in-out;
+}
+
+@-webkit-keyframes load {
+  0% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+    opacity: 0%;
+  }
+  100% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+    opacity: 100%;
+  }
+}
+
+@keyframes load {
+  0% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+    opacity: 0%;
+  }
+  100% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+    opacity: 100%;
+  }
 }
 
 .row .col-4 a {
@@ -33,6 +59,8 @@
   bottom: 29vh;
   text-decoration: none;
   color: white;
+  -webkit-animation: load-content 3s ease-in-out;
+          animation: load-content 3s ease-in-out;
 }
 
 .row .col-4 a button {
@@ -50,14 +78,35 @@
   font-size: 2rem;
 }
 
-.row .col-4 a .modal {
+@-webkit-keyframes load-content {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+@keyframes load-content {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+.row .col-4 .modal {
   position: fixed;
   top: 50%;
   left: 50%;
+  display: block;
   -webkit-transform: translate(-50%, -50%) scale(0);
           transform: translate(-50%, -50%) scale(0);
-  -webkit-transition: 2s ease-in-out;
-  transition: 2s ease-in-out;
+  -webkit-transition: -webkit-transform 2s ease-in-out;
+  transition: -webkit-transform 2s ease-in-out;
+  transition: transform 2s ease-in-out;
+  transition: transform 2s ease-in-out, -webkit-transform 2s ease-in-out;
   border: 1px solid black;
   z-index: 10;
   background-color: white;
@@ -65,7 +114,7 @@
   max-width: 80%;
 }
 
-.row .col-4 a .modal .header {
+.row .col-4 .modal .header {
   padding: 10px 15px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -78,12 +127,12 @@
           align-items: center;
 }
 
-.row .col-4 a .modal .header .title {
+.row .col-4 .modal .header .title {
   font-size: 1.25rem;
   font-weight: bold;
 }
 
-.row .col-4 a .modal .header .close-btn {
+.row .col-4 .modal .header .close-btn {
   cursor: pointer;
   border: none;
   outline: none;
@@ -92,16 +141,16 @@
   font-weight: bold;
 }
 
-.row .col-4 a .modal .body {
+.row .col-4 .modal .body {
   padding: 10px 15px;
 }
 
-.row .col-4 a .modal.active {
+.row .col-4 .modal.active {
   -webkit-transform: translate(-50%, -50%) scale(1);
           transform: translate(-50%, -50%) scale(1);
 }
 
-.row .col-4 a #overlay {
+.row .col-4 #overlay {
   position: fixed;
   opacity: 0;
   top: 0;
@@ -112,9 +161,10 @@
   pointer-events: none;
   -webkit-transition: 2s ease-in-out;
   transition: 2s ease-in-out;
+  z-index: 9;
 }
 
-.row .col-4 a #overlay.active {
+.row .col-4 #overlay.active {
   opacity: 1;
   pointer-events: all;
 }
@@ -152,6 +202,8 @@
   bottom: 17vh;
   height: 8vh;
   width: 8vh;
+  -webkit-animation: load-content 3s ease-in-out;
+          animation: load-content 3s ease-in-out;
 }
 
 .row #btn-insta {
@@ -163,5 +215,7 @@
   bottom: 5vh;
   height: 9vh;
   width: 9vh;
+  -webkit-animation: load-content 3s ease-in-out;
+          animation: load-content 3s ease-in-out;
 }
 /*# sourceMappingURL=index.css.map */

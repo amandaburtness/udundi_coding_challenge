@@ -8,6 +8,7 @@ $overlay-color: rgba(0, 0, 0, 0.5);
 /* CSS General Reset */
 
 * {
+    // border: 1px solid green;
     margin: 0;
     padding: 0;
     max-width: 100%;
@@ -23,7 +24,18 @@ $overlay-color: rgba(0, 0, 0, 0.5);
         background-color: $primary-color;
 
         h1 {
-            animation: ease 5s;
+            animation: load 2s ease-in-out;
+        }
+
+        @keyframes load {
+            0% {
+                transform: translateX(-100%);
+                opacity: 0%;
+            }
+            100% {
+                transform: translateX(0%);
+                opacity: 100%;
+            }
         }
 
         a {
@@ -35,6 +47,7 @@ $overlay-color: rgba(0, 0, 0, 0.5);
             bottom: 29vh;
             text-decoration: none;
             color: $main-text-color;
+            animation: load-content 3s ease-in-out;
 
             button {
                 background: url("../udundi_coding_challenge/images/Plus.svg") no-repeat;
@@ -49,66 +62,81 @@ $overlay-color: rgba(0, 0, 0, 0.5);
                 font-size: 2rem;
             }
 
-            .modal {
-                position: fixed;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%) scale(0);
-                transition: 2s ease-in-out;
-                border: 1px solid black;
-                z-index: 10;
-                background-color: $popup-background-color;
-                width: 400px;
-                max-width: 80%;
-
-                .header {
-                    padding: 10px 15px;
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-
-                    .title {
-                        font-size: 1.25rem;
-                        font-weight: bold;
-                    }
-
-                    .close-btn {
-                        cursor: pointer;
-                        border: none;
-                        outline: none;
-                        background: none;
-                        font-size: 1.25rem;
-                        font-weight: bold;
-                    }
-                }
             
-                .body {
-                    padding: 10px 15px;
+
+            @keyframes load-content {
+                0% {
+                    opacity: 0%;
+                }
+
+                100% {
+                    opacity: 100%;
                 }
             }
 
-            .modal.active {
-                transform: translate(-50%, -50%) scale(1);
-            }
-
-            #overlay {
-                position: fixed;
-                opacity: 0;
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                background-color: $overlay-color;
-                pointer-events: none;
-                transition: 2s ease-in-out;
-            }
-
-            #overlay.active {
-                opacity: 1;
-                pointer-events: all;
-            }
+            
           }
 
+          .modal {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            display: block;
+            transform: translate(-50%, -50%) scale(0);
+            transition: transform 2s ease-in-out;
+            border: 1px solid black;
+            z-index: 10;
+            background-color: $popup-background-color;
+            width: 400px;
+            max-width: 80%;
+
+            .header {
+                padding: 10px 15px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .title {
+                    font-size: 1.25rem;
+                    font-weight: bold;
+                }
+
+                .close-btn {
+                    cursor: pointer;
+                    border: none;
+                    outline: none;
+                    background: none;
+                    font-size: 1.25rem;
+                    font-weight: bold;
+                }
+            }
+        
+            .body {
+                padding: 10px 15px;
+            }
+        }
+        .modal.active {
+            transform: translate(-50%, -50%) scale(1);
+            
+        }
+
+        #overlay {
+            position: fixed;
+            opacity: 0;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: $overlay-color;
+            pointer-events: none;
+            transition: 2s ease-in-out;
+            z-index: 9;
+        }
+
+        #overlay.active {
+            opacity: 1;
+            pointer-events: all;
+        }
     }
 
     .col-8 {
@@ -144,6 +172,7 @@ $overlay-color: rgba(0, 0, 0, 0.5);
         bottom: 17vh;
         height: 8vh;
         width: 8vh;
+        animation: load-content 3s ease-in-out;
     }
 
     #btn-insta {
@@ -155,6 +184,7 @@ $overlay-color: rgba(0, 0, 0, 0.5);
         bottom: 5vh;
         height: 9vh;
         width: 9vh;
+        animation: load-content 3s ease-in-out;
     }
 }
 
