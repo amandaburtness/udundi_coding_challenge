@@ -64,7 +64,7 @@
 }
 
 .row .col-4 a button {
-  background: url("../udundi_coding_challenge/images/Plus.svg") no-repeat;
+  background: url("../images/Plus.svg") no-repeat;
   border: none;
   height: 43px;
   width: 43px;
@@ -201,7 +201,7 @@
 }
 
 .row .jumbotron {
-  background-image: url("../udundi_coding_challenge/images/Coding-Challenge-Image.png");
+  background-image: url("../images/Coding-Challenge-Image.png");
   height: 100vh;
   background-size: cover;
   background-position: center;
@@ -221,7 +221,7 @@
 }
 
 .row #btn-fb {
-  background: url("../udundi_coding_challenge/images/Facebook.svg") no-repeat;
+  background: url("../images/Facebook.svg") no-repeat;
   background-size: contain;
   display: inline-block;
   position: absolute;
@@ -234,7 +234,7 @@
 }
 
 .row #btn-insta {
-  background: url("../udundi_coding_challenge/images/Instagram.svg") no-repeat;
+  background: url("../images/Instagram.svg") no-repeat;
   background-size: contain;
   display: inline-block;
   position: absolute;
